@@ -524,7 +524,7 @@ export default function TrackingPage() {
                       <div className="flex justify-between items-center pt-8 border-t border-slate-50 dark:border-slate-900">
                         <div className="flex items-center gap-3">
                           <div className="w-3 h-3 rounded-full" style={{ backgroundColor: al.color }} />
-                          <span className="text-xs font-black uppercase tracking-[0.2em] text-slate-500/90 dark:text-slate-400/90">{al.category}</span>
+                          <span className="text-xs font-black uppercase tracking-[0.2em] text-slate-500/90 dark:text-slate-400/90">{al.catenamegory}</span>
                         </div>
                         <div className="flex items-center gap-6">
                           <div className="text-xs font-black uppercase tracking-[0.2em] text-slate-500/90 dark:text-slate-400/90">

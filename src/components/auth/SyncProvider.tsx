@@ -137,7 +137,7 @@ export function SyncProvider({ children }: { children: ReactNode }) {
       .on('postgres_changes', { event: '*', schema: 'public', filter: `household_id=eq.${householdId}` }, (payload) => {
         // Refetch or intelligently update store
         const table = payload.table;
-        supabase.from(table).select('*').eq('household_id', householdId).then(({ data }) => {
+        supabase.from(table).select('*').eq('household_id', householdId).then(({ data }: { data: any[] | null }) => {
           if (data) {
             const update: any = {};
             if (table === 'accounts') update.accounts = data;

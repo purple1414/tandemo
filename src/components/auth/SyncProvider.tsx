@@ -82,12 +82,12 @@ export function SyncProvider({ children }: { children: ReactNode }) {
 
         setInitialData({
           accounts: accounts || [],
-          transactions: (transactions || []).map((tx, i) => {
+          transactions: (transactions || []).map((tx: any, i: number) => {
             // One-time diagnostic: log column names of first row
             if (i === 0) console.log('[DB Schema] transactions columns:', Object.keys(tx));
             return { ...tx, allowanceName: tx.allowance_name };
           }),
-          savingsGoals: (goals || []).map(g => ({
+          savingsGoals: (goals || []).map((g: any) => ({
             id: g.id,
             name: g.name,
             targetAmount: g.targetamount,
@@ -95,7 +95,7 @@ export function SyncProvider({ children }: { children: ReactNode }) {
             targetAccountId: g.targetaccountid,
             deductionAccountId: g.deductionaccountid
           })),
-          allowances: (allowances || []).map(al => ({
+          allowances: (allowances || []).map((al: any) => ({
             id: al.id,
             name: al.name,
             amount: al.amount,
@@ -107,7 +107,7 @@ export function SyncProvider({ children }: { children: ReactNode }) {
             status: al.status,
             color: al.color
           })),
-          automations: (automations || []).map(a => ({
+          automations: (automations || []).map((a: any) => ({
             id: a.id,
             name: a.name,
             amount: a.amount,

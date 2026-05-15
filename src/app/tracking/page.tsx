@@ -830,7 +830,7 @@ export default function TrackingPage() {
                     )}>
                       {isExpense ? "-" : "+"}₱{tx.amount.toLocaleString()}
                     </p>
-                    <p className="text-[9px] font-bold text-muted-foreground/20 uppercase tracking-[0.2em] mt-1">{tx.accountName}</p>
+                    <p className="text-[9px] font-bold text-muted-foreground/20 uppercase tracking-[0.2em] mt-1">{tx.account}</p>
                   </div>
                 </div>
               );

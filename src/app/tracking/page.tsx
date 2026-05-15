@@ -712,7 +712,7 @@ export default function TrackingPage() {
                       dy={15}
                     />
                     <Tooltip 
-                      cursor={{ fill: 'rgba(99, 102, 241, 0.02)', radius: [12, 12, 0, 0] }}
+                      cursor={{ fill: 'rgba(99, 102, 241, 0.02)' }}
                       content={<CustomTooltip />}
                     />
                     <Bar dataKey="count" radius={[10, 10, 0, 0]} onClick={handleBarClick}>
